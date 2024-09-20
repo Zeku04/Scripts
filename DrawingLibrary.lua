@@ -145,7 +145,7 @@ Drawing.new = function(Type, UI)
                     CircleProperties.Position = Value
                 end
                 if (Property == "Filled") then
-                    CircleFrame.BackgroundTransparency = Value == true and 0 or 0.8
+                    CircleFrame.BackgroundTransparency = Value == true and 0 or 0.95
                     CircleProperties.Filled = Value
                 end
                 if (Property == "Color") then
@@ -157,7 +157,7 @@ Drawing.new = function(Type, UI)
                     CircleProperties.Visible = Value
                 end
                 if (Property == "Transparency") then
-
+                    CircleFrame.BackgroundTransparency = Value == true and 0 or 0.95
                 end
             end),
             __index = (function(self, Property)
@@ -283,7 +283,9 @@ Drawing.new = function(Type, UI)
                     SquareProperties.Visible = Value
                 end
                 if (Property == "Filed") then -- requires beta
-
+                   SquareFrame.BackgroundTransparency = .99
+                   SquareFrame.BorderThickness = 1
+                
                 end
             end),
             __index = (function(self, Property)
